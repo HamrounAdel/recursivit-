@@ -1,0 +1,15 @@
+FUNCTION palindrome(s: string): boolean;
+VAR
+    mot:string;
+BEGIN
+    mot="";
+    FOR i FROM length(s)-1 TO 0 STEP -1  DO
+        mot=mot+s[i]
+    END_FOR
+    FOR i FROM 0 TO length(s)-1 STEP 1  DO
+        IF (S[i]=mot[i]) THEN
+            return vrai;   
+        END_IF
+    END_FOR
+    return faux;
+END
