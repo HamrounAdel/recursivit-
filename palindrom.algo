@@ -1,3 +1,4 @@
+//par le boucle for
 FUNCTION palindrome(s: string): boolean;
 VAR
     mot:string;
@@ -12,4 +13,16 @@ BEGIN
         END_IF
     END_FOR
     return faux;
+END
+// par recurcivité
+
+FUNCTION palindrome(s: string): boolean;
+BEGIN
+    IF (length(s) < 2) THEN
+        RETURN true;
+    ELSE IF (s[1] = s[length(s)]) THEN
+        RETURN palindrome(copy(s, 2, length(s) - 2));
+    ELSE
+        RETURN false;
+    END_IF
 END
